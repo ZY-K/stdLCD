@@ -106,8 +106,8 @@ void MMUConfigAndEnable(void)
 stdLCD_t lcd0;
 int main(void)
 {
-    //MMUConfigAndEnable();
-    //CacheEnable(CACHE_ALL);
+    MMUConfigAndEnable();
+    CacheEnable(CACHE_ALL);
 
     /* Initialize console for communication with the Host Machine */
     ConsoleUtilsInit();
@@ -131,90 +131,35 @@ int main(void)
 
     stdLCD_puts(&lcd0, "hello world!!\n\r");
     stdLCD_puts(&lcd0, "hello world!!");
-    for(i=0; i<1000000; i++);
+    for(i=0; i<100000000; i++);
     stdLCD_set_backLight_off(&lcd0);
-    for(i=0; i<1000000; i++);
+    for(i=0; i<100000000; i++);
     stdLCD_set_backLight_on(&lcd0);
-    for(i=0; i<1000000; i++);
+    for(i=0; i<100000000; i++);
     stdLCD_set_backLight_off(&lcd0);
-    for(i=0; i<1000000; i++);
+    for(i=0; i<100000000; i++);
     stdLCD_set_backLight_on(&lcd0);
-    for(i=0; i<1000000; i++);
+    for(i=0; i<100000000; i++);
 
     while(1)
     {
         stdLCD_display_shift(&lcd0, -1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, -1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, -1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, -1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, 1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, 1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, 1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
         stdLCD_display_shift(&lcd0, 1);
-        for(i=0; i<1000000; i++);
+        for(i=0; i<100000000; i++);
     }
-#if 0
-    while(1)
-    {
-    	stdLCD_putc(&lcd0, 'a');
-    	//for(i=0; i<3000; i++);
-    	stdLCD_putc(&lcd0, 'b');
-    	//for(i=0; i<3000; i++);
-    	stdLCD_putc(&lcd0, 'c');
-    	//for(i=0; i<3000; i++);
-    	//stdLCD_set_cursor(&lcd0, 5, 1);
-    	//stdLCD_set_cursor_auto_move_to_left(&lcd0);
-    	//for(i=0; i<3000; i++);
-    	stdLCD_putc(&lcd0, 'd');
-    	//for(i=0; i<3000; i++);
-    	stdLCD_putc(&lcd0, 'e');
-    	//for(i=0; i<3000; i++);
-    	stdLCD_putc(&lcd0, 'f');
-    	stdLCD_putc(&lcd0, 'g');
-    	stdLCD_putc(&lcd0, 'h');
-    	stdLCD_putc(&lcd0, 'i');
-    	stdLCD_putc(&lcd0, 'j');
-    	stdLCD_putc(&lcd0, 'k');
-    	stdLCD_putc(&lcd0, 'l');
-    	stdLCD_putc(&lcd0, 'm');
-    	stdLCD_putc(&lcd0, 'n');
-    	stdLCD_putc(&lcd0, 'o');
-    	stdLCD_putc(&lcd0, 'p');
-    	//for(i=0; i<3000; i++);
-    	//stdLCD_set_window_auto_shift_and_cursor_move_to_left(&lcd0);
-    	//for(i=0; i<3000; i++);
-    	stdLCD_putc(&lcd0, '0');
-    	stdLCD_putc(&lcd0, '1');
-    	stdLCD_putc(&lcd0, '2');
-    	stdLCD_putc(&lcd0, '3');
-    	stdLCD_putc(&lcd0, '4');
-    	stdLCD_putc(&lcd0, '5');
-    	stdLCD_putc(&lcd0, '6');
-    	stdLCD_putc(&lcd0, '7');
-    	stdLCD_putc(&lcd0, '8');
-    	stdLCD_putc(&lcd0, '9');
-    	stdLCD_putc(&lcd0, 'A');
-    	stdLCD_putc(&lcd0, 'B');
-    	stdLCD_putc(&lcd0, 'C');
-    	stdLCD_putc(&lcd0, 'D');
-    	stdLCD_putc(&lcd0, 'E');
-    	stdLCD_putc(&lcd0, 'F');
-    }
-    stdLCD_display_shift(&lcd0, 2);
-    stdLCD_display_shift(&lcd0, -2);
-    stdLCD_set_cursor_at(&lcd0, 0, 1);
-    uint8_t col, row;
-    stdLCD_get_last_printed_char_at(&lcd0, &col, &row);
-    stdLCD_set_cursor_at(&lcd0, 0, 0);
-    stdLCD_puts(&lcd0, "hello !!\n\r\\\'\"");
-#endif
 }
 
 
