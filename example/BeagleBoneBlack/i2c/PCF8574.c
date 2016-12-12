@@ -66,7 +66,7 @@ uint8_t PCF8574__read(uint8_t who)
     while(!I2CMasterIntRawStatusEx(SOC_I2C_1_REGS, I2C_INT_STOP_CONDITION));
     I2CMasterIntClearEx(SOC_I2C_1_REGS, I2C_INT_STOP_CONDITION);
 
-	return value;
+    return value;
 }
 
 void PCF8574__write(uint8_t who, uint8_t data)
