@@ -8,4 +8,5 @@ You need to port 3 functions to your platform/MCU:
 these 3 functions are written in the 'stdlcd_io.c'.
 
 The library struct show below.
+
 ![image](./miscellaneous/struct.PNG)
