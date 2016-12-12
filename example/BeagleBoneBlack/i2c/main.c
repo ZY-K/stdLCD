@@ -1,11 +1,10 @@
+/* This example using the Texas Instruments 'StarterWare' SDK. */
 #include "hsi2c.h"
 #include "beaglebone.h"
 #include "mmu.h"
 #include "cache.h"
-#include "interrupt.h"
-#include "consoleUtils.h"
 #include "soc_AM335x.h"
-#include <stdio.h>
+#include "dmtimer.h"
 
 #include "../../../stdLCD.h"
 
@@ -108,13 +107,6 @@ int main(void)
 {
     MMUConfigAndEnable();
     CacheEnable(CACHE_ALL);
-
-    /* Initialize console for communication with the Host Machine */
-    ConsoleUtilsInit();
-
-    /* Select the console type based on compile time check */
-    ConsoleUtilsSetType(CONSOLE_UART);
-
 
     DMTimer7ModuleClkConfig();
     /*
